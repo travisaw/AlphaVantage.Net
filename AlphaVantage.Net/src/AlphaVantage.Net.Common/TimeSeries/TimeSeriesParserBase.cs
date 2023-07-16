@@ -69,7 +69,7 @@ namespace AlphaVantage.Net.Common.TimeSeries
         {
             foreach (var fieldJson in dataPointFieldsJson.EnumerateObject())
             {
-                GetParsingDelegate(fieldJson.Name)?.Invoke(dataPoint, fieldJson.Value.GetString());
+                GetParsingDelegate(fieldJson.Name)?.Invoke(dataPoint, fieldJson.Value.GetString()!);
             }
         }
     }

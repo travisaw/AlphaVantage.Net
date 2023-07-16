@@ -38,7 +38,7 @@ namespace AlphaVantage.Net.Common.Parsing
                 ref Utf8JsonReader reader,
                 Type typeToConvert,
                 JsonSerializerOptions options) =>
-                reader.GetString().Replace("%", "").ParseToDecimal();
+                reader.GetString()!.Replace("%", "").ParseToDecimal();
 
             public override void Write(
                 Utf8JsonWriter writer,
@@ -53,7 +53,7 @@ namespace AlphaVantage.Net.Common.Parsing
                 ref Utf8JsonReader reader,
                 Type typeToConvert,
                 JsonSerializerOptions options) =>
-                reader.GetString().ParseToLong();
+                reader.GetString()!.ParseToLong();
 
             public override void Write(
                 Utf8JsonWriter writer,
@@ -68,7 +68,7 @@ namespace AlphaVantage.Net.Common.Parsing
                 ref Utf8JsonReader reader,
                 Type typeToConvert,
                 JsonSerializerOptions options) =>
-                reader.GetString().ParseToInt();
+                reader.GetString()!.ParseToInt();
 
             public override void Write(
                 Utf8JsonWriter writer,
@@ -83,7 +83,7 @@ namespace AlphaVantage.Net.Common.Parsing
                 ref Utf8JsonReader reader,
                 Type typeToConvert,
                 JsonSerializerOptions options) =>
-                reader.GetString().ParseToDateTime();
+                reader.GetString()!.ParseToDateTime();
 
             public override void Write(
                 Utf8JsonWriter writer,

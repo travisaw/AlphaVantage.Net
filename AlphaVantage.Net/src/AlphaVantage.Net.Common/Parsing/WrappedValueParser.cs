@@ -25,7 +25,7 @@ namespace AlphaVantage.Net.Common.Parsing
                 var serializerOptions = SerializerOptionsFactory.GetSerializerOptions();
                 serializerOptions.PropertyNamingPolicy = new WrappedValueNamingPolicy(_wrappedValuePropertyName);
                 
-                quoteWrapper = JsonSerializer.Deserialize<Wrapper>(jsonString, serializerOptions);
+                quoteWrapper = JsonSerializer.Deserialize<Wrapper>(jsonString, serializerOptions)!;
             }
             catch (Exception ex)
             {
